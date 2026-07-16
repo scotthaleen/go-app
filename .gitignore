@@ -1,0 +1,13 @@
+.DS_Store
+/go-app
+*.test
+*.out
+coverage.out
+dist/
+bin/
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal

@@ -1,0 +1,24 @@
+version: "3"
+
+tasks:
+  fmt:
+    desc: Format Go files with gofumpt
+    cmds:
+      - go run mvdan.cc/gofumpt@v0.10.0 -w .
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test ./...
+
+  vet:
+    desc: Run go vet
+    cmds:
+      - go vet ./...
+
+  check:
+    desc: Run fmt, test, and vet
+    cmds:
+      - task: fmt
+      - task: test
+      - task: vet
