@@ -385,3 +385,7 @@ curl -X POST http://localhost:8081/shutdown
 ```
 
 The examples keep settings/config application-owned: each app defines a small `Config`, populates it at the application boundary, registers it with `app.WithDependency`, and resolves it during startup.
+
+## Credits
+
+The lifecycle model is inspired by Stuart Sierra's [`component`](https://github.com/stuartsierra/component) library for Clojure. `go-app` adapts its explicit start/stop boundaries to Go while keeping startup topology caller-owned and leaving out automatic dependency graph solving.
